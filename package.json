@@ -1,0 +1,17 @@
+{
+  "name": "diana",
+  "version": "0.0.1",
+  "description": "a11y hunting",
+  "author": "Melanie Sumner <melaniersumner@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "chrome-debugging-client": "^1.0.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
