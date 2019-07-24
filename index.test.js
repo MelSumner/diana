@@ -11,7 +11,6 @@ test('a11y node count', async function () {
 // test/count how many data nodes there are
 // (eventually:?) de-spawn chrome
 
-  await run(async page => {
     const chrome = spawnChrome();
 
     const browser = chrome.connection;
@@ -30,17 +29,10 @@ test('a11y node count', async function () {
     
     await page.send('Accessibility.enable');
 
-    //start stuck part 
-
-
     let fullAXTree = await page.send('Accessibility.getFullAXTree');
     await callback(page);
-
-    // end stuck part
 
     expect(fullAXTree.nodes.length).toBe(15); 
     await browser.send("Target.closeTarget", { targetId });
 
-    
-  }); 
 });
