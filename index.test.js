@@ -27,15 +27,18 @@ test('a11y node count', async function () {
     await browser.send('Target.activateTarget', { targetId });
 
     const page = await browser.attachToTarget(targetId);
-
+    
     await page.send('Accessibility.enable');
 
+    //start stuck part 
+
     await callback(page);
-    
     let fullAXTree = await page.send('Accessibility.getFullAXTree');
 
-    expect(fullAXTree.nodes.length).toBe(15);
 
+    // end stuck part
+
+    expect(fullAXTree.nodes.length).toBe(15); 
     await browser.send("Target.closeTarget", { targetId });
 
     
