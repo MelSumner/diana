@@ -32,9 +32,9 @@ test('a11y node count', async function () {
 
     //start stuck part 
 
-    await callback(page);
-    let fullAXTree = await page.send('Accessibility.getFullAXTree');
 
+    let fullAXTree = await page.send('Accessibility.getFullAXTree');
+    await callback(page);
 
     // end stuck part
 
