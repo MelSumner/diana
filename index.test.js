@@ -4,10 +4,12 @@ test('a11y node count', async function () {
 // spawn Chrome
 // tell it what to do if it errors
 // create/set the target (URL)
-
+// send the target to the browser
+// attach the target
 // enable the accessibility tree API
-// go to the URL + return the full AX tree
-// count how many data nodes there are
+// get the full AX tree (getFullAXTree)
+// test/count how many data nodes there are
+// (eventually:?) de-spawn chrome
 
   await run(async page => {
     const chrome = spawnChrome();
@@ -19,10 +21,10 @@ test('a11y node count', async function () {
       console.error(`connection error ${err.stack}`);
     });
 
-    const { targetId } = await browser.send("Target.createTarget", {
-      url: "https://diana-app.netlify.com",
+    const { targetId } = await browser.send('Target.createTarget', {
+      url: 'https://diana-app.netlify.com',
     });
-    await browser.send("Target.activateTarget", { targetId });
+    await browser.send('Target.activateTarget', { targetId });
 
     const page = await browser.attachToTarget(targetId);
 
@@ -33,6 +35,9 @@ test('a11y node count', async function () {
     let fullAXTree = await page.send('Accessibility.getFullAXTree');
 
     expect(fullAXTree.nodes.length).toBe(15);
+
+    await browser.send("Target.closeTarget", { targetId });
+
     
   }); 
 });
