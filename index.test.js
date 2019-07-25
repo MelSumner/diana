@@ -1,16 +1,20 @@
 const { spawnChrome } = require("chrome-debugging-client");
 
 test('a11y node count', async function () {
-// spawn Chrome
-// tell it what to do if it errors
-// create/set the target (URL)
-// send the target to the browser
-// attach the target
-// enable the accessibility tree API
-// get the full AX tree (getFullAXTree)
-// test/count how many data nodes there are
-// (eventually:?) de-spawn chrome
+  debugger;
+// Here's what we want to do:
+// - spawn Chrome
+// - tell it what to do if it errors
+// - create/set the target (URL)
+// - send the target to the browser
+// - attach the target
+// - enable the accessibility tree API
+// - get the full AX tree (getFullAXTree)
+// - test/count how many data nodes there are
+// - de-spawn chrome
 
+    // const chrome = spawnChrome({ headless:true }); 
+    // TODO check to see if headless:true/false returns a different node count. if we can determine that is the case, file an issue with Chrome
     const chrome = spawnChrome();
 
     const browser = chrome.connection;
