@@ -1,12 +1,10 @@
-import { test } from 'qunit';
-
 const { spawnChrome } = require("chrome-debugging-client");
 
-test( "hello test", function( assert ) {
+QUnit.test( "hello test", function( assert ) {
   assert.ok( 1 == "1", "Passed!" );
 });
 
-test('a11y node count', async function ( assert ) {
+QUnit.test('a11y node count', async function ( assert ) {
   debugger;
   // spawn Chrome
   const chrome = spawnChrome();
@@ -20,7 +18,7 @@ test('a11y node count', async function ( assert ) {
 
   // create/set the target (URL)
   const { targetId } = await browser.send('Target.createTarget', {
-    url: 'https://diana-app.netlify.com',
+    url: 'about:blank',
   });
 
   // send the target to the browser
@@ -36,7 +34,7 @@ test('a11y node count', async function ( assert ) {
   let fullAXTree = await page.send('Accessibility.getFullAXTree');
 
   // test/count how many data nodes there are
-  assert.equal(fullAXTree.nodes.length, 14); 
+  assert.equal(fullAXTree.nodes.length, 1); 
 
   // de-spawn chrome
   await browser.send("Target.closeTarget", { targetId });
