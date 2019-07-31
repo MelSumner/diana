@@ -6,8 +6,11 @@ QUnit.test( "hello test", function( assert ) {
 
 QUnit.test('a11y node count', async function ( assert ) {
   debugger;
-  // spawn Chrome
+
+  // spawn Chrome or headless Chrome (not both, comment out the line as needed)
   const chrome = spawnChrome();
+  // const chrome = spawnChrome({ headless: true });
+
   const browser = chrome.connection;
 
   // handle errors
@@ -38,4 +41,7 @@ QUnit.test('a11y node count', async function ( assert ) {
 
   // de-spawn chrome
   await browser.send("Target.closeTarget", { targetId });
+  await chrome.close();
+  assert.ok(chrome.hasExited());
+
 });
