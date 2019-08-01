@@ -14,7 +14,7 @@ const fs = require('fs');
     // Capture AX Tree
     const fullAXSnapshot = await page.accessibility.snapshot( {interestingOnly:true} );
 
-    console.log(fullAXSnapshot);
+    console.log(JSON.stringify(fullAXSnapshot));
     
     fs.writeFileSync('fullAXSnapshot.json', JSON.stringify(fullAXSnapshot));
 

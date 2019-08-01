@@ -10,17 +10,11 @@ A tool for hunting accessibility nodes (named after Diana, the goddess of the hu
 
 ## Notes
 
-- Chrome vs headless Chrome seems to return a different count for `Accessibility.getFullAxTree` 
+- To see this tool's current state in action, run `node diana.js` 
 
-- if you visit `about:blank` & open the devtools to inspect the page: 
-This is returned in the Elements tab:
+### To Discuss
 
-```
-<html>
-  <head></head>
-  <body></body>
-</html>
-```
+- Puppeteer?
+- `interestingOnly` true/false & what that means for the tool design
 
-However in the accessibility inspector, only `WebArea` is returned. This means that there are some HTML elements that the Accessibility Tree does not return precisely. This also means that we will likely need to evaluate which HTML elements are returned and which are ignored. 
 
