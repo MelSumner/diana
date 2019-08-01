@@ -1,0 +1,15 @@
+{
+  "role": "WebArea",
+  "name": "Hunting A11y",
+  "children": [
+    { "role": "heading", "name": "Hunting A11y", "level": 1 },
+    { "role": "heading", "name": "Purpose", "level": 2 },
+    {
+      "role": "text",
+      "name": "The purpose of this site is to provide a simple page of semantic markup that we can use while working with the accessibility API."
+    },
+    { "role": "text", "name": "Made in Visual Studio Code. Versioned on" },
+    { "role": "link", "name": "GitHub" },
+    { "role": "text", "name": ". Deployed on Netlify." }
+  ]
+}

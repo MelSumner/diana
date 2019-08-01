@@ -12,6 +12,7 @@
     "chrome-debugging-client": "^1.0.1"
   },
   "devDependencies": {
+    "puppeteer": "^1.19.0",
     "qunit": "^2.9.2"
   }
 }
