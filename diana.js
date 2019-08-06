@@ -12,11 +12,11 @@ const fs = require('fs');
     await page.screenshot( { path: 'ss-diana.png'} );
 
     // Capture AX Tree
-    const fullAXSnapshot = await page.accessibility.snapshot( {interestingOnly:true} );
-
-    console.log(JSON.stringify(fullAXSnapshot));
+    const fullAXSnapshot = await page.accessibility.snapshot( {interestingOnly:false} );  
     
+    // write the JSON to a file - if interestingOnly is set to true, use the second one
     fs.writeFileSync('fullAXSnapshot.json', JSON.stringify(fullAXSnapshot));
+    // fs.writeFileSync('interestingAXSnapshot.json', JSON.stringify(fullAXSnapshot));
 
     await browser.close();
 })();

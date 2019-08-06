@@ -16,5 +16,4 @@ A tool for hunting accessibility nodes (named after Diana, the goddess of the hu
 
 - Puppeteer?
 - `interestingOnly` true/false & what that means for the tool design
-
-
+- it could be a useful way to enforce using [landmark regions]() by counting the `fullAXSnapshot` (because there should only be a few direct descendants of the `<body>` element)
