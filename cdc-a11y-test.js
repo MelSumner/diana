@@ -64,8 +64,5 @@ test('Get fullAXTree from Test App', async function() {
                                 + '_dianaTree.json';
 
             fs.writeFileSync(filePath, JSON.stringify(data.nodes, null, 2));
-
     });
 });
-
-
