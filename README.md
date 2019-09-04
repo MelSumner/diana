@@ -1,16 +1,16 @@
 # Diana
 
-A tool for hunting accessibility nodes (named after Diana, the goddess of the hunt). 
+A tool for hunting accessibility nodes (named after Diana, the goddess of the hunt).
 
 ## References
-- [Qunit](https://qunitjs.com/)
+- [Qunit](https://qunitjs.com/) (in progress: switching from JEST to QUNIT)
 - [Chrome DevTools Protocol Viewer](https://chromedevtools.github.io/devtools-protocol/tot/Accessibility)
 - [Chrome Debugger Client](https://github.com/TracerBench/chrome-debugging-client)
 - [Sample app used in this repo](https://diana-app.netlify.com/) - it's specifically semantic HTML, and is anticipated to grow in complexity as this tool progresses.
 
 ## Notes
 
-- To see this tool's current state in action, run `node diana.js`
+- To see this tool's current state in action, run `npm run test`
 
 ### To Discuss
 
