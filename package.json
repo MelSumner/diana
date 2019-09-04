@@ -5,7 +5,7 @@
   "author": "Melanie Sumner <melaniersumner@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "qunit"
+    "test": "jest"
   },
   "dependencies": {
     "chrome-debugging-client": "^1.0.1",
@@ -13,6 +13,8 @@
     "node-json-equal": "^0.1.0"
   },
   "devDependencies": {
+    "devtools-protocol": "0.0.692805",
+    "jest": "^24.9.0",
     "qunit": "^2.9.2"
   }
 }

@@ -1,4 +1,4 @@
-// diana.js
+// diana-test.js
 const { spawnChrome } = require("chrome-debugging-client");
 const fs = require("fs");
 

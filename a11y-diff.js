@@ -20,4 +20,5 @@ function a11yDiffResult(treefileA, treeFileB) {
     return jsonDiff.diffString(treeA, treeB);
 }
 
+
 module.exports = {a11yDiffStr, a11yDiffEqual, a11yDiffResult};
