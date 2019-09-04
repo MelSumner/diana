@@ -4,15 +4,15 @@
   "description": "a11y hunting",
   "author": "Melanie Sumner <melaniersumner@gmail.com>",
   "license": "MIT",
-  "main": "index.js",
   "scripts": {
     "test": "qunit"
   },
   "dependencies": {
-    "chrome-debugging-client": "^1.0.1"
+    "chrome-debugging-client": "^1.0.1",
+    "json-diff": "^0.5.4",
+    "node-json-equal": "^0.1.0"
   },
   "devDependencies": {
-    "puppeteer": "^1.19.0",
     "qunit": "^2.9.2"
   }
 }
