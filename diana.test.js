@@ -63,5 +63,34 @@ test('Get fullAXTree from Test Site', async function() {
             var filePath = './' + curDate.toISOString().substring(0,16).replace(':', '') + '_dianaTree.json' ;
 
             fs.writeFileSync(filePath, JSON.stringify(data.nodes, null, 2));
+
+          // what would an audio-only user hear when they visit this page?  
+          // let's assert that a few things exist:
+          //    banner landmark (this is the <header> element)
+          //    main landmark (this is the <main> element)
+          //    contentinfo landmark (this is the footer element)
+          // this is for diana-app.netlify.com  
+          assert(dom,
+            webArea(
+              banner({}),
+              main(),
+              contentInfo()
+            )
+          );
+
+          // this is for linkedin.com
+          // we care about order, we don't care (yet) about text content of the element
+          assert(dom,
+            webArea(
+              region(), // #1 is where the wormhole toasts/alerts go 
+              // #2 is the skip nav link
+              label(),
+              button(),
+              // #3 is the header with the role of banner
+              banner({
+
+              }),
+              
+            ))
     });
 });
