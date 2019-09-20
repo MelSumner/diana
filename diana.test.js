@@ -71,29 +71,29 @@ test('Get fullAXTree from Test Site', async function() {
           //    contentinfo landmark (this is the footer element)
           // this is for diana-app.netlify.com
            
-          // assert(dom,
-          //   webArea(
-          //     banner({}),
-          //     main(),
-          //     contentInfo()
-          //   )
-          // );
+          assert(dom,
+            webArea(
+              banner({}),
+              main(),
+              contentInfo()
+            )
+          );
 
           // this is for linkedin.com
           // we care about order, we don't care (yet) about text content of the element
-          // assert(dom,
-          //   webArea(
-          //     region(), // #1 is where the wormhole toasts/alerts go 
-          //     // #2 is the skip nav link
-          //     label(),
-          //     button(),
-          //     // #3 is the header with the role of banner
-          //     banner({
+          assert(dom,
+            webArea(
+              region(), // #1 is where the wormhole toasts/alerts go 
+              // #2 is the skip nav link
+              label(),
+              button(),
+              // #3 is the header with the role of banner
+              banner({
 
-          //     }),
+              }),
               
-          //   )
-          // );
-          
+            )
+          );
+
     });
 });
