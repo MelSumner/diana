@@ -1,6 +1,6 @@
 # Diana
 
-A tool for hunting accessibility nodes (named after Diana, the goddess of the hunt).
+DIANA stands for Differential Inspection of Accessibility Node Architecture and is a tool for hunting accessibility nodes.
 
 ## References
 - [Qunit](https://qunitjs.com/) (in progress: switching from JEST to QUNIT)
@@ -10,7 +10,7 @@ A tool for hunting accessibility nodes (named after Diana, the goddess of the hu
 
 ## Notes
 
-- To see this tool's current state in action, run `npm run test`
+- To see this tool's current state in action, run `npm run test` but there are no guarantees that it will work.
 
 ### To Discuss
 
